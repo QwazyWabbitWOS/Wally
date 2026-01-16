@@ -43,6 +43,7 @@
 #include <boost/interprocess/sync/scoped_lock.hpp>
 #include <boost/interprocess/sync/named_mutex.hpp>
 #include <boost/json.hpp>
+#include <boost/system/error_code.hpp>
 #include <iomanip>
 #include <iostream>
 #include <boost/algorithm/string.hpp>

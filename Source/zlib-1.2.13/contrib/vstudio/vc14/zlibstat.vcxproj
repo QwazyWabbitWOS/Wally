@@ -197,6 +197,7 @@
       <ModuleDependenciesFile>$(IntDir)</ModuleDependenciesFile>
       <XMLDocumentationFileName>$(IntDir)</XMLDocumentationFileName>
       <SourceDependenciesFile>$(IntDir)</SourceDependenciesFile>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </ClCompile>
     <ResourceCompile>
       <Culture>0x040c</Culture>

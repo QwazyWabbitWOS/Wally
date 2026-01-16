@@ -646,7 +646,7 @@ void CWallyDoc::SerializeImage (CArchive& ar)
 			if (ihSerialize.GetErrorCode() != IH_SUCCESS)
 			{
 				CString strError("");
-				strError.Format ("Failed to write %s.  Error code = %s\n\n", strFilePath, ihSerialize.GetErrorText());
+				strError.Format("Failed to write %s.  Error code = %s\n\n", static_cast<LPCTSTR>(strFilePath), static_cast<LPCTSTR>(ihSerialize.GetErrorText()));
 				AfxMessageBox (strError);
 				return;
 			}
@@ -661,7 +661,7 @@ void CWallyDoc::SerializeImage (CArchive& ar)
 			if (ihSerialize.GetErrorCode() != IH_SUCCESS)
 			{
 				CString strError("");
-				strError.Format ("Failed to read %s.  Error code = %s\n\n", strFilePath, ihSerialize.GetErrorText());
+				strError.Format ("Failed to read %s.  Error code = %s\n\n", static_cast<LPCTSTR>(strFilePath), static_cast<LPCTSTR>(ihSerialize.GetErrorText()));
 				AfxMessageBox (strError);
 				return;
 			}
@@ -757,7 +757,7 @@ void CWallyDoc::SerializeImage (CArchive& ar)
 					if (!pby8BitData)
 					{
 						CString strError("");
-						strError.Format ("Out of memory error reading %s", strFilePath);
+						strError.Format ("Out of memory error reading %s", static_cast<LPCTSTR>(strFilePath));
 						AfxMessageBox (strError);
 						return;
 					}
@@ -839,7 +839,7 @@ AfxMessageBox( "This is a 32-bit image. Wally does not yet support editing\n"
 					if (!pby8BitData)
 					{
 						CString strError("");
-						strError.Format ("Out of memory error reading %s", strFilePath);
+						strError.Format ("Out of memory error reading %s", static_cast<LPCTSTR>(strFilePath));
 						AfxMessageBox (strError);
 						return;
 					}
