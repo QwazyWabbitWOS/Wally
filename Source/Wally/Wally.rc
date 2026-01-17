@@ -323,8 +323,8 @@ BEGIN
         END
         MENUITEM "C&lear\tDel",                 ID_EDIT_CLEAR
         MENUITEM SEPARATOR
-        MENUITEM "Re&Mip\tF11",                 ID_TP_REMIP
-        MENUITEM "Te&xture Properties...\tF12", ID_TP_FLAGS
+        MENUITEM "Re&Mip\tF9",                 ID_TP_REMIP
+        MENUITEM "Te&xture Properties...\tF10", ID_TP_FLAGS
     END
     POPUP "Wi&zard"
     BEGIN
@@ -880,8 +880,8 @@ BEGIN
     VK_DELETE,      ID_EDIT_CUT,            VIRTKEY, SHIFT, NOINVERT
     VK_F1,          ID_HELP,                VIRTKEY, NOINVERT
     VK_F1,          ID_CONTEXT_HELP,        VIRTKEY, SHIFT, NOINVERT
-    VK_F11,         ID_TP_REMIP,            VIRTKEY, NOINVERT
-    VK_F12,         ID_TP_FLAGS,            VIRTKEY, NOINVERT
+    VK_F9,          ID_TP_REMIP,            VIRTKEY, NOINVERT
+    VK_F10,         ID_TP_FLAGS,            VIRTKEY, NOINVERT
     VK_F2,          ID_PAK_POPUP_RENAME,    VIRTKEY, NOINVERT
     VK_F5,          ID_FILE_REFRESH,        VIRTKEY, NOINVERT
     VK_F6,          ID_NEXT_PANE,           VIRTKEY, NOINVERT
