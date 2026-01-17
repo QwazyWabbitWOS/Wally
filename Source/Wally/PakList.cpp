@@ -1766,23 +1766,21 @@ CPakList::~CPakList()
 	PurgePasteList();
 }
 
-void CPakList::CreateTempName(char *szTempName, int iLength)
+void CPakList::CreateTempName(char* szTempName, int iLength)
 {
-	srand( (unsigned)time( NULL ) );
-	
-	div_t dt;
-	int iNum = 0;
-	int j = 0;
+	srand((unsigned)time(NULL));
 
-	memset (szTempName, 0, iLength);
+	memset(szTempName, 0, iLength + 1);
 
-	for (j = 0; j < iLength; j++)
+	for (int j = 0; j < iLength; j++)
 	{
-		dt = div (rand(), 16);
-		iNum = dt.rem;
-		
-		sprintf_s (szTempName + j, iLength - j, "%x", iNum); 
+		int iNum = rand() % 16;
+		// Write a single hex digit, ensure buffer isn't overflowed
+		szTempName[j] = "0123456789abcdef"[iNum];
 	}
+	// Null-terminate the string
+	if (iLength > 0)
+		szTempName[iLength] = '\0';
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
